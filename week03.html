@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介カード</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 py-8" >
+    <main class="max-w-4xl mx-auto px-4">
+      <h1 class="text-2xl font-bold text-gray-900 mb-6 text-center">チーム桃太郎</h1>
+
+      <!-- カードを横3枚並びにする。スマホでは縦1列 -->
+      <div class="flex flex-col md:flex-row gap-6">
+
+        <div class="bg-white rounded-lg shadow p-10 flex justify-between flex-col items-center">
+          <span class="text-4xl">🐵</span>
+          <h2 class="text-lg font-bold text-gray-900 mt-3">猿</h2>
+          <p class="text-gray-600 text-sm mt-2 text-center">ムードメーカー。手先が器用。</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-10 flex justify-between flex-col items-center">
+          <span class="text-4xl">🐓</span>
+          <h2 class="text-lg font-bold text-gray-900 mt-3">雉</h2>
+          <p class="text-gray-600 text-sm mt-2 text-center">真面目。嘴が武器。</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-10 flex justify-between flex-col items-center">
+          <span class="text-4xl">🐶</span>
+          <h2 class="text-lg font-bold text-gray-900 mt-3">犬</h2>
+          <p class="text-gray-600 text-sm mt-2 text-center">食いしん坊。嗅覚がするどい。</p>
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>

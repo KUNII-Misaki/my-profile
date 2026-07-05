@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week05 トップページ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class=" bg-white shadow fixed top-0 left-0 w-full bg-white border-b z-50  px-4 py-4">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between md:gap-16 px-4 md:px-8">
+            <h1 class="text-xl font-bold text-black mt-2">デジタルデトックス推奨委員会</h1>
+            <nav class="flex flex-col gap-2 md:flex-row md:gap-8 text-sm text-gray-700 ">
+                <a href="#active" class="hover:text-blue-700 hover:underline mt-2">活動詳細</a>
+                <a href="#member" class="hover:text-blue-700 hover:underline mt-2">メンバー</a>
+                <a href="#link" class="hover:text-blue-700 hover:underline mt-2">SNSリンク</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="mx-auto px-4 mt-40 md:px-6 md:py-30 md:mt-24">
+            <div class=" min-h-[400px] md:min-h-[500px] bg-cover bg-center flex flex-col justify-center items-center py-12 px-4" 
+            style="background-image: url(https://makun-academy.com/wp-content/uploads/2025/02/img_5596-1-1536x1024.jpg);">
+            <div class="w-full max-w-3xl text-center bg-black/30 p-6 rounded-xl btext-gray-800 mt-4ackdrop-blur-sm">
+                <h2 class="text-2xl md:text-4xl font-bold text-white mb-6">デジタルデトックス推進委員会</h2>
+                <div class="hidden md:block text-white text-4xl font-bold">PCを見ている目、疲れていませんか？</div>
+                <div class="block md:hidden text-white text-xl font-bold">スマホを見ている目、疲れていませんか？</div>
+            </div>
+        </section>
+        <section class="p-4 md:m-40">
+            <h2 id="active" class="text-xl font-bold text-center mb-4 scroll-mt-24">活動紹介</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-8 py-8 md:py-16">
+                <div class="flex flex-col md:col-start-2 md:row-start-1 bg-white rounded-lg shadow p-8 hover:shadow-lg transition">
+                    <p class="text-2xl mb-8">🏃</p>
+                    <h3 class="font-bold">お散歩会</h3>
+                    <p class="text-gray-500 text-sm mt-1">川沿いを歩きます</p>
+                </div>
+                 <div class="md:col-start-1 md:row-start-2 bg-white rounded-lg shadow p-8 hover:shadow-lg transition">
+                    <p class="text-2xl mb-8">📚</p>
+                    <h3 class="font-bold">読書会</h3>
+                    <p class="text-gray-500 text-sm mt-1">面白い本をシェアしよう</p>
+                </div>
+                 <div class="md:col-start-3 md:row-start-2 bg-white rounded-lg shadow p-8 hover:shadow-lg transition">
+                    <p class="text-2xl mb-8">⭐</p>
+                    <h3 class="font-bold">瞑想会</h3>
+                    <p class="text-gray-500 text-sm mt-1">マインドフルネス</p>
+                </div>
+            </div>
+        </section>
+
+         <section class="p-4 md:p-40">
+            <h2 id="member" class="text-xl font-bold mb-4 scroll-mt-24 text-center">メンバー</h2>
+            <div>
+                <div class="flex flex-col md:flex-row gap-4 rounded-xl shadow-lg p-6">
+                    <img src="img/talk.png" alt="メンバー紹介画像" class="w-full md:w-1/2 h-80 object-contain rounded-lg">
+                    <div class="flex flex-col">
+                        <h2 class="text-2xl font-bold">こんにちは</h2>
+                        <p class="text-xl mb-8">代表役です。よいしょ！！</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+
+ <section class="py-16 px-8 md:px-40">
+    <h2 class="text-xl font-bold mb-4 text-center">入会方法</h2>
+    
+    <div class="grid grid-cols-1  gap-8 py-8 text-center max-w-2xl mx-auto md:grid-cols-3 md:max-w-none md:gap-12">
+        
+        <div class="bg-white rounded-lg p-6 md:p-10 shadow-sm w-full">
+            <h3 class="font-bold text-2xl">step1</h3>
+            <p class="mt-4 text-base md:text-lg">公式ラインから友達追加してください</p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 md:p-10 shadow-sm w-full">
+            <h3 class="font-bold text-2xl">step2</h3>
+            <p class="mt-4 text-base md:text-lg">送られてくるグーグルフォームに必要項目を記入してください</p>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 md:p-10 shadow-sm w-full">
+            <h3 class="font-bold text-2xl">step3</h3>
+            <p class="mt-4 text-base md:text-lg">委員会のグループラインの招待が来ます。参加ができましたら、入会完了です！</p>
+        </div>
+
+    </div>
+
+    
+</section>
+    </main>
+    <footer id="link" class="bg-blue-400 w-full border-t bottom-0 left-0 mt-20 py-24">
+        <div>
+            <h1 class="font-bold text-center text-white text-2xl">リンク</h1>
+            <nav class="flex gap-6 justify-center mt-16">
+                <a href="" class="text-blue-400 rounded-lg p-6 text-center text-sm bg-white font-bold hover:text-blue-800 hover:underline">twitter</a>
+                <a href="" class="text-blue-400 rounded-lg p-6 text-center font-bold text-sm bg-white hover:text-blue-800 hover:underline">instagram</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

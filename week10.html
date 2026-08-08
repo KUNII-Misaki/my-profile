@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>ユーザー一覧</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="bg-gray-100 p-8">
+    <h1 class="text-2xl font-bold mb-6 text-center">ユーザー一覧</h1>
+    <div id="userList" class="grid gap-4 mx-auto max-w-2xl"></div>
+
+    <script>
+      async function loadUsers() {
+        const userList = document.getElementById("userList");
+
+        try {
+          const response = await fetch("https://api.github.com/users/KUNII-Misaki");
+
+          if (!response.ok) {
+            throw new Error("ユーザーが見つかりませんでした: " + response.status);
+          }
+
+          const user = await response.json();
+
+          console.log(user);
+
+          userList.textContent = "";
+
+            const card = document.createElement("div");
+            card.className = "bg-white rounded-lg shadow p-4 flex flex-col justify-center items-center";
+            
+
+            const avatar = document.createElement("img");
+            avatar.src = user.avatar_url;
+            avatar.alt = user.login;
+            avatar.className = "w-24 h-24 rounded-full mb-4 object-cover border-2 border-gray-200"
+
+            const name = document.createElement("h2");
+            name.className = "text-xl font-bold text-gray-800 mb-1";
+            name.textContent = user.name || user.login
+
+            const bio = document.createElement("p");
+            bio.className = "text-gray-600 text-sm mb-4";
+            bio.textContent = user.bio || "自己紹介はありません";
+
+            const followers = document.createElement("p");
+            followers.className = "text-sm text-gray-700 bg-gray-100 px-3 py-1 rounded-full";
+            followers.textContent = `フォロワー: ${user.followers}人`;
+
+            card.appendChild(avatar);
+            card.appendChild(name);
+            card.appendChild(bio);
+            card.appendChild(followers);
+
+            userList.appendChild(card);
+
+        } catch (error) {
+          userList.textContent = "データの取得に失敗しました。";
+          console.error(error);
+        }
+      }
+
+      loadUsers();
+    </script>
+  </body>
+</html>
